@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 0 132.292 132.292">
+    <g transform="translate(0 -164.708)">
+        <path
+            style="opacity:1;fill:#fff;fill-opacity:1;stroke:#000;stroke-width:1.32291663;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+            d="M0 164.708h132.292V297H0z" />
+        <rect
+            style="opacity:1;fill:#fff;fill-opacity:1;stroke:#000;stroke-width:1.32291665;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+            width="38.754" height="38.754" x="13.631" y="176.729" ry="0" />
+        <circle
+            style="opacity:1;fill:#fff;fill-opacity:1;stroke:#000;stroke-width:1.32291663;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+            cx="96.217" cy="205.594" r="21.114" />
+        <path
+            style="opacity:1;fill:#fff;fill-opacity:1;stroke:#000;stroke-width:1.32291663;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+            d="M50.845 291.455H1.54l12.326-21.35 12.326-21.35 12.327 21.35z" />
+        <path d="m79.256 292.199 36.862-35.566M79.904 255.985l35.566 36.862"
+            style="fill:none;stroke:#000;stroke-width:1.32291663;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+            transform="translate(.267 -5.078)" />
+    </g>
+</svg>
