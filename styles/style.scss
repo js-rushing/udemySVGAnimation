@@ -1,0 +1,278 @@
+$shapes-logo-animation-speed: 2.5s;
+$monkey-animation-speed: 3s;
+
+$hand-drawn-text-path-length: 610;
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.showcase {
+    height: 100vh;
+    position: relative;
+    border-bottom: 1px solid rgba(0, 0, 0, .5);
+    padding: 0;
+    margin: 0;
+}
+
+#shapes-logo {
+    svg {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+    }
+
+    .square {
+        stroke-dasharray: 610;
+        stroke-dashoffset: 0;
+        animation: draw-square $shapes-logo-animation-speed infinite;
+        transform-origin: center;
+    }
+
+    .hexagon {
+        stroke-dasharray: 425;
+        stroke-dashoffset: 0;
+        animation: draw-hexagon $shapes-logo-animation-speed infinite;
+        transform-origin: center;
+    }
+
+    @keyframes draw-square {
+        0% {
+            stroke-dashoffset: -610;
+            transform: rotate(0)
+        }
+
+        100% {
+            sroke-dashoffset: 0;
+            transform: rotate(720deg)
+        }
+    }
+
+    @keyframes draw-hexagon {
+        0% {
+            stroke-dashoffset: -425;
+            transform: rotate(0)
+        }
+
+        100% {
+            sroke-dashoffset: 0;
+            transform: rotate(360deg)
+        }
+    }
+}
+
+#monkey {
+    svg {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+    }
+
+    .monkey {
+        stroke: green;
+        stroke-width: 2px;
+        stroke-dashoffset: -2000;
+        stroke-dasharray: 2000;
+        animation: monkey $monkey-animation-speed infinite;
+        // animation-iteration-count: 1;
+        animation-direction: alternate;
+        animation-timing-function: ease-out;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes monkey {
+        0% {
+            stroke-dashoffset: -2000;
+            stroke: green;
+        }
+
+        50% {
+            stroke: red;
+        }
+
+        100% {
+            stroke-dashoffset: 0;
+            stroke: purple;
+        }
+    }
+}
+
+#hand-drawn-text {
+    svg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+    }
+
+    path {
+        stroke-dasharray: $hand-drawn-text-path-length;
+        animation: draw 5s reverse infinite;
+    }
+
+    @keyframes draw {
+        0% {
+            stroke-dashoffset: 0;
+        }
+
+        70% {
+            stroke-dashoffset: $hand-drawn-text-path-length;
+        }
+
+        100% {
+            // stroke-dashoffset: $hand-drawn-text-path-length;
+        }
+    }
+}
+
+#social-icons {
+    svg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+    }
+
+    .twitter-outline,
+    .twitter-icon {
+        transition: transform 300ms, opacity 450ms;
+        transform-box: fill-box;
+        transform-origin: 50% 50%;
+        cursor: pointer;
+    }
+
+    .twitter-icon-group {
+        &:hover {
+            .twitter-outline {
+                transform: scale(0);
+            }
+
+            .twitter-icon {
+                transform: scale(2);
+                stroke: #4099FF;
+                opacity: 0;
+            }
+        }
+    }
+
+    .youtube-icon,
+    .youtube-outline,
+    .youtube-inner-circle {
+        transition: 300ms all;
+        transform-box: fill-box;
+        transform-origin: 50% 50%;
+        cursor: pointer;
+    }
+
+    .youtube-icon-group:hover {
+        .youtube-outline {
+            transform: scale(1.2);
+        }
+
+        .youtube-inner-circle {
+            fill: #F26768;
+        }
+
+        .youtube-icon {
+            stroke: #FFF;
+        }
+    }
+
+    .facebook-icon-group {
+        cursor: pointer;
+    }
+
+    .facebook-detail,
+    .facebook-outline {
+        transition: 300ms all;
+        transform-box: fill-box;
+        transform-origin: 50% 50%;
+    }
+
+    .facebook-detail {
+        opacity: 0;
+    }
+
+    .facebook-icon-group:hover {
+        .facebook-outline {
+            transform: scale(1.8);
+            opacity: 0;
+        }
+
+        .facebook-detail {
+            opacity: 1;
+            transform: scale(0.8);
+        }
+    }
+}
+
+#ig-gradient {
+    svg {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+    }
+}
+
+#text-textures {
+    svg {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+    }
+
+    text {
+        font-size: 60px;
+        font-weight: bold;
+    }
+}
+
+#svg-masking {
+    background-color: #555;
+
+    svg {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+    }
+
+    circle {
+        animation: 3s roll alternate infinite;
+    }
+
+    @keyframes roll {
+        0% {
+            transform: translateX(0px);
+        }
+
+        100% {
+            transform: translateX(600px);
+        }
+    }
+}
